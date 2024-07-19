@@ -1,27 +1,30 @@
-# CarouselAngular
+# Project Name:  Config Driven Carousel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+## Project Description
 
-## Development server
+> A config-driven carousel
+> Users can dynamically pass images, decide the number of images to be shown, set image limits, and determine actions to perform on image clicks.
+> Responsive design with  dynamic option to change number of images
+ 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies Used
 
-## Code scaffolding
+- Angular: Leveraged Angular’s robust component-based architecture and lifecycle hooks (ngAfterViewInit and ngAfterViewChecked) to ensure proper initialization and updates.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Responsive Design: Ensured that the carousel is fully responsive, adjusting the number of images per slide based on the available width.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Challenges Overcome:
 
-## Running unit tests
+- Image Loading and Width Calculation: Implemented solutions to calculate image widths and handle layout adjustments dynamically correctly.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Lifecycle Management: Managed component lifecycles effectively to ensure the UI updates correctly upon changes in data or view.
 
-## Running end-to-end tests
+##  Next Steps: 
+- I plan to continue enhancing this project by adding more customization options, including dynamic buttons, in future iterations.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<br>
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- # [Live Link](https://carousel-angular-zeta.vercel.app/)
+
