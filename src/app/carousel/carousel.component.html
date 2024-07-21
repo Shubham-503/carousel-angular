@@ -23,12 +23,19 @@
       (click)="onImgClick(image, index)"
     />
   </div>
-  <button class="btn prev" style="background: red" (click)="goToPrev()">
-    Prev
+  <!-- <ng-content select=".btn.prev" (click)="goToPrev()"></ng-content> -->
+  <button
+    class="btn prev"
+    [ngStyle]="prevButtonConfig.styles"
+    (click)="goToPrev()"
+  >
+    {{ prevButtonConfig.label }}
   </button>
-  <button class="btn next" style="background: blue" (click)="goToNext()">
-    Next
+  <button
+    class="btn next"
+    [ngStyle]="nextButtonConfig.styles"
+    (click)="goToNext()"
+  >
+    {{ nextButtonConfig.label }}
   </button>
-  <!-- <div [innerHTML]="customPrevButton(goToPrev)"></div>
-  <div [innerHTML]="customNextButton(goToNext)"></div> -->
 </div>

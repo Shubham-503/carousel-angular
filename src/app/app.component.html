@@ -1,14 +1,13 @@
+<h1>Carousel</h1>
 <div class="carousel-container">
   <app-carousel
     [images]="images"
     [isLoading]="loading"
     [onImgClick]="onImgClick"
-    [imgPerSlide]="2"
+    [imgPerSlide]="3"
     [imageLimit]="5"
-    [customPrevButton]="customPrevButton"
-    [customNextButton]="customNextButton"
+    [prevButtonConfig]="prevButtonConfig"
+    [nextButtonConfig]="nextButtonConfig"
   >
   </app-carousel>
 </div>
-
-<h1>app component</h1>

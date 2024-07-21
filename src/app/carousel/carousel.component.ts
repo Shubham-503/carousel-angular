@@ -9,6 +9,7 @@ import {
   ViewChildren,
   ElementRef,
 } from '@angular/core';
+import { Buttonconfig } from '../types.ts/button-config';
 
 @Component({
   selector: 'app-carousel',
@@ -21,10 +22,10 @@ export class CarouselComponent
   @Input() images: any[] = [];
   @Input() isLoading = false;
   @Input() imageLimit = this.images.length;
-  @Input() customPrevButton: any;
-  @Input() customNextButton: any;
   @Input() onImgClick: (image: any, index: number) => void = () => {};
   @Input() imgPerSlide = 1;
+  @Input() prevButtonConfig!: Buttonconfig;
+  @Input() nextButtonConfig!: Buttonconfig;
 
   currentIndex = 0;
   imgWidth = 0;
@@ -65,12 +66,17 @@ export class CarouselComponent
 
   goToPrev() {
     this.currentIndex =
-      this.currentIndex === 0 ? this.imageLimit - 1 : this.currentIndex - 1;
+      this.currentIndex === 0
+        ? this.imageLimit - this.imgPerSlide
+        : this.currentIndex - 1;
+    console.log(this.currentIndex);
   }
 
   goToNext() {
     this.currentIndex =
-      this.currentIndex === this.imageLimit - 1 ? 0 : this.currentIndex + 1;
+      this.currentIndex === this.imageLimit - this.imgPerSlide
+        ? 0
+        : this.currentIndex + 1;
   }
 
   onImageLoad(event: Event) {
